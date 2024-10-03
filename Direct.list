@@ -8,6 +8,7 @@ DOMAIN-SUFFIX,hao123.com
 
 # MYDNS
 DOMAIN-SUFFIX,wikos.cn
+DOMAIN-SUFFIX,letsencrypt.org
 
 # pixman国内
 DOMAIN-SUFFIX,dnsany.com
