@@ -7,7 +7,7 @@ DOMAIN-SUFFIX,lanzov.com
 DOMAIN-SUFFIX,hao123.com
 
 # MYDNS
-DOMAIN,home.wikos.cn
+DOMAIN-SUFFIX,wikos.cn
 DOMAIN-SUFFIX,letsencrypt.org
 
 # pixman国内
