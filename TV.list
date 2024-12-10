@@ -8,9 +8,27 @@ DOMAIN,mytvsuperlimited.hb.omtrdc.net
 DOMAIN,mytvsuperlimited.sc.omtrdc.net
 DOMAIN-SUFFIX,mytvsuper.com
 DOMAIN-SUFFIX,tvb.com
+
+# stream-link
 DOMAIN-KEYWORD,stream-link
 DOMAIN-SUFFIX,stream-link.org
+
+# TV
 DOMAIN-SUFFIX,hoy.tv
 DOMAIN-SUFFIX,hkdvb.com
 DOMAIN-SUFFIX,just.wiko.top
 DOMAIN-SUFFIX,tw.wiko.top
+
+# Pixman
+DOMAIN-SUFFIX,hinet.net
+DOMAIN-SUFFIX,ofiii.com
+DOMAIN-SUFFIX,cooltv.top
+DOMAIN-SUFFIX,thetvapp.to
+DOMAIN-SUFFIX,livednow.com
+DOMAIN-SUFFIX,livednow.org
+DOMAIN-SUFFIX,wx.sb
+
+# 4GTV
+DOMAIN-SUFFIX,cdn.hinet.net
+DOMAIN-SUFFIX,4gtv.tv
+DOMAIN-KEYWORD,4gtv
