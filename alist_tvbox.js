@@ -5,6 +5,11 @@ let appConfig = {
     ver: 20241009,
     title: '小雅tvbox',
 }
+let token = ''
+
+if (token) {
+    $cache.set('alist_xiaoya_token', token)
+}
 
 if (custom) {
     $cache.set('alist_tvbox_host', custom)
@@ -16,6 +21,13 @@ async function getConfig() {
     let config = appConfig
     let host = $cache.get('alist_tvbox_host')
     // let host = argsify($config_str)?.url || $cache.get('alist_tvbox_host')
+    let token = $cache.get('alist_xiaoya_token')
+    // let host = argsify($config_str)?.url || $cache.get('alist_xiaoya_host')
+    // let token = argsify($config_str)?.token || $cache.get('alist_xiaoya_token')
+    if (typeof $config_str !== 'undefined') {
+        host = argsify($config_str)?.url || $cache.get('alist_xiaoya_host')
+        token = argsify($config_str)?.token || $cache.get('alist_xiaoya_token')
+    token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
     if (typeof $config_str !== 'undefined') {
         host = argsify($config_str)?.url || $cache.get('alist_tvbox_host')
     }
@@ -41,7 +53,7 @@ async function getConfig() {
 async function getTabs(host) {
     let list = []
 
-    let url = host + '/vod1'
+    let url = host + '/vod1' +token
 
     const { data } = await $fetch.get(url, {
         headers: {
@@ -110,7 +122,7 @@ async function getCards(ext) {
                 vod_pic: e.vod_pic,
                 vod_remarks: e.vod_remarks,
                 ext: {
-                    url: `${host}/vod1?ids=${e.vod_id}`,
+                    url: `${host}/vod1${token}?ids=${e.vod_id}`,
                 },
             })
         })
@@ -147,7 +159,7 @@ async function getTracks(ext) {
                 name: name,
                 pan: '',
                 ext: {
-                    url: `${host}/play?id=${url || name}&from=open`,
+                    url: `${host}/play${token}?id=${url || name}&from=open`,
                 },
             })
         })
@@ -224,7 +236,7 @@ async function search(ext) {
             host = argsify($config_str)?.url || $cache.get('alist_tvbox_host')
         }
 
-        const url = `${host}/vod1?wd=${text}`
+        const url = `${host}/vod1${token}?wd=${text}`
 
         const { data } = await $fetch.get(url, {
             headers: {
@@ -240,7 +252,7 @@ async function search(ext) {
                 vod_pic: e.vod_pic,
                 vod_remarks: e.vod_remarks,
                 ext: {
-                    url: `${host}/vod1?ids=${id}`,
+                    url: `${host}/vod1${token}?ids=${id}`,
                 },
             })
         })
