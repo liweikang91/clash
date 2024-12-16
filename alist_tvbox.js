@@ -22,11 +22,10 @@ async function getConfig() {
     let host = $cache.get('alist_tvbox_host')
     // let host = argsify($config_str)?.url || $cache.get('alist_tvbox_host')
     let token = $cache.get('alist_xiaoya_token')
-    // let host = argsify($config_str)?.url || $cache.get('alist_xiaoya_host')
-    // let token = argsify($config_str)?.token || $cache.get('alist_xiaoya_token')
+    token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
     if (typeof $config_str !== 'undefined') {
-        host = argsify($config_str)?.url || $cache.get('alist_xiaoya_host')
-        token = argsify($config_str)?.token || $cache.get('alist_xiaoya_token')
+            token = argsify($config_str)?.token || $cache.get('alist_xiaoya_token')
+    }
     token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
     if (typeof $config_str !== 'undefined') {
         host = argsify($config_str)?.url || $cache.get('alist_tvbox_host')
@@ -107,6 +106,12 @@ async function getCards(ext) {
         if (typeof $config_str !== 'undefined') {
             host = argsify($config_str)?.url || $cache.get('alist_tvbox_host')
         }
+        let token = $cache.get('alist_xiaoya_token')
+        token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
+        if (typeof $config_str !== 'undefined') {
+            token = argsify($config_str)?.token || $cache.get('alist_xiaoya_token')
+        }
+        token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
 
         let url = ext.url + `&pg=${page}`
         const { data } = await $fetch.get(url, {
@@ -142,6 +147,12 @@ async function getTracks(ext) {
     if (typeof $config_str !== 'undefined') {
         host = argsify($config_str)?.url || $cache.get('alist_tvbox_host')
     }
+    let token = $cache.get('alist_xiaoya_token')
+    token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
+    if (typeof $config_str !== 'undefined') {
+            token = argsify($config_str)?.token || $cache.get('alist_xiaoya_token')
+    }
+    token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
 
     const { data } = await $fetch.get(url, {
         headers: {
@@ -235,6 +246,12 @@ async function search(ext) {
         if (typeof $config_str !== 'undefined') {
             host = argsify($config_str)?.url || $cache.get('alist_tvbox_host')
         }
+        let token = $cache.get('alist_xiaoya_token')
+        token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
+        if (typeof $config_str !== 'undefined') {
+            token = argsify($config_str)?.token || $cache.get('alist_xiaoya_token')
+        }
+        token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
 
         const url = `${host}/vod1${token}?wd=${text}`
 
