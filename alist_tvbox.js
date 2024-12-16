@@ -41,7 +41,7 @@ async function getConfig() {
 async function getTabs(host) {
     let list = []
 
-    let url = host + '/vod1' + wikococa
+    let url = host + '/vod1/wikococa
 
     const { data } = await $fetch.get(url, {
         headers: {
