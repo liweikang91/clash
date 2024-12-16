@@ -5,11 +5,6 @@ let appConfig = {
     ver: 20241009,
     title: '小雅tvbox',
 }
-let token = ''
-
-if (token) {
-    $cache.set('alist_xiaoya_token', token)
-}
 
 if (custom) {
     $cache.set('alist_tvbox_host', custom)
@@ -21,12 +16,6 @@ async function getConfig() {
     let config = appConfig
     let host = $cache.get('alist_tvbox_host')
     // let host = argsify($config_str)?.url || $cache.get('alist_tvbox_host')
-    let token = $cache.get('alist_xiaoya_token')
-    token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
-    if (typeof $config_str !== 'undefined') {
-            token = argsify($config_str)?.token || $cache.get('alist_xiaoya_token')
-    }
-    token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
     if (typeof $config_str !== 'undefined') {
         host = argsify($config_str)?.url || $cache.get('alist_tvbox_host')
     }
@@ -52,7 +41,7 @@ async function getConfig() {
 async function getTabs(host) {
     let list = []
 
-    let url = host + '/vod1' +token
+    let url = host + '/vod1' + wikococa
 
     const { data } = await $fetch.get(url, {
         headers: {
@@ -106,12 +95,6 @@ async function getCards(ext) {
         if (typeof $config_str !== 'undefined') {
             host = argsify($config_str)?.url || $cache.get('alist_tvbox_host')
         }
-        let token = $cache.get('alist_xiaoya_token')
-        token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
-        if (typeof $config_str !== 'undefined') {
-            token = argsify($config_str)?.token || $cache.get('alist_xiaoya_token')
-        }
-        token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
 
         let url = ext.url + `&pg=${page}`
         const { data } = await $fetch.get(url, {
@@ -127,7 +110,7 @@ async function getCards(ext) {
                 vod_pic: e.vod_pic,
                 vod_remarks: e.vod_remarks,
                 ext: {
-                    url: `${host}/vod1${token}?ids=${e.vod_id}`,
+                    url: `${host}/vod1/wikococa?ids=${e.vod_id}`,
                 },
             })
         })
@@ -147,12 +130,6 @@ async function getTracks(ext) {
     if (typeof $config_str !== 'undefined') {
         host = argsify($config_str)?.url || $cache.get('alist_tvbox_host')
     }
-    let token = $cache.get('alist_xiaoya_token')
-    token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
-    if (typeof $config_str !== 'undefined') {
-            token = argsify($config_str)?.token || $cache.get('alist_xiaoya_token')
-    }
-    token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
 
     const { data } = await $fetch.get(url, {
         headers: {
@@ -170,7 +147,7 @@ async function getTracks(ext) {
                 name: name,
                 pan: '',
                 ext: {
-                    url: `${host}/play${token}?id=${url || name}&from=open`,
+                    url: `${host}/play/wikococa?id=${url || name}&from=open`,
                 },
             })
         })
@@ -246,14 +223,8 @@ async function search(ext) {
         if (typeof $config_str !== 'undefined') {
             host = argsify($config_str)?.url || $cache.get('alist_tvbox_host')
         }
-        let token = $cache.get('alist_xiaoya_token')
-        token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
-        if (typeof $config_str !== 'undefined') {
-            token = argsify($config_str)?.token || $cache.get('alist_xiaoya_token')
-        }
-        token && token.startsWith('alist-') ? (headers['Authorization'] = token) : $cache.set('alist_xiaoya_token', '')
 
-        const url = `${host}/vod1${token}?wd=${text}`
+        const url = `${host}/vod1/wikococa?wd=${text}`
 
         const { data } = await $fetch.get(url, {
             headers: {
@@ -269,7 +240,7 @@ async function search(ext) {
                 vod_pic: e.vod_pic,
                 vod_remarks: e.vod_remarks,
                 ext: {
-                    url: `${host}/vod1${token}?ids=${id}`,
+                    url: `${host}/vod1/wikococa?ids=${id}`,
                 },
             })
         })
