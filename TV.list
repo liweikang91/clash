@@ -1,3 +1,7 @@
+# 自己
+DOMAIN-SUFFIX,wiko.top
+DOMAIN-SUFFIX,wikos.top
+
 # MyTVSuper
 USER-AGENT,mytv*
 DOMAIN-KEYWORD,nowtv100
@@ -18,6 +22,9 @@ DOMAIN-SUFFIX,hoy.tv
 DOMAIN-SUFFIX,hkdvb.com
 DOMAIN-SUFFIX,just.wiko.top
 DOMAIN-SUFFIX,tw.wiko.top
+
+# TW
+DOMAIN-SUFFIX,cdn.hinet.net
 
 # Pixman
 DOMAIN-SUFFIX,hinet.net
