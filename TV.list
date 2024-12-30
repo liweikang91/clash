@@ -1,7 +1,3 @@
-# WIKO
-DOMAIN-SUFFIX,wiko.top
-DOMAIN-SUFFIX,wikos.top
-
 # MyTVSuper
 USER-AGENT,mytv*
 DOMAIN-KEYWORD,nowtv100
@@ -20,8 +16,6 @@ DOMAIN-SUFFIX,stream-link.org
 # TV
 DOMAIN-SUFFIX,hoy.tv
 DOMAIN-SUFFIX,hkdvb.com
-DOMAIN-SUFFIX,just.wiko.top
-DOMAIN-SUFFIX,tw.wiko.top
 
 # TW
 DOMAIN-SUFFIX,cdn.hinet.net
@@ -54,3 +48,9 @@ DOMAIN-KEYWORD,speedtest
 
 # speedtest
 DOMAIN-SUFFIX,speedtest.net
+
+# WIKO
+DOMAIN-SUFFIX,wiko.top
+DOMAIN-SUFFIX,wikos.top
+IP-CIDR,212.192.12.245/32,no-resolve
+IP-CIDR,37.128.253.4/32,no-resolve
