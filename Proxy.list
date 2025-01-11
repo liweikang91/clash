@@ -37,12 +37,6 @@ DOMAIN-SUFFIX,wx.sb
 DOMAIN-SUFFIX,4gtv.tv
 DOMAIN-KEYWORD,4gtv
 
-# WIKO
-DOMAIN-SUFFIX,wiko.top
-DOMAIN-SUFFIX,wikos.top
-IP-CIDR,212.192.12.245/32,no-resolve
-IP-CIDR,37.128.253.4/32,no-resolve
-
 # 国外DNS
 DOMAIN-SUFFIX,dns.google
 DOMAIN-SUFFIX,1dot1dot1dot1.cloudflare-dns.com
