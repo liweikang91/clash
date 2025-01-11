@@ -13,6 +13,36 @@ DOMAIN-SUFFIX,speed.dler.io
 DOMAIN-KEYWORD,speedtest
 DOMAIN-SUFFIX,speedtest.net
 
+# stream-link
+DOMAIN-KEYWORD,stream-link
+DOMAIN-SUFFIX,stream-link.org
+
+# TV
+DOMAIN-SUFFIX,hoy.tv
+DOMAIN-SUFFIX,hkdvb.com
+
+# TW
+DOMAIN-SUFFIX,cdn.hinet.net
+
+# Pixman
+DOMAIN-SUFFIX,hinet.net
+DOMAIN-SUFFIX,ofiii.com
+DOMAIN-SUFFIX,cooltv.top
+DOMAIN-SUFFIX,thetvapp.to
+DOMAIN-SUFFIX,livednow.com
+DOMAIN-SUFFIX,livednow.org
+DOMAIN-SUFFIX,wx.sb
+
+# 4GTV
+DOMAIN-SUFFIX,4gtv.tv
+DOMAIN-KEYWORD,4gtv
+
+# WIKO
+DOMAIN-SUFFIX,wiko.top
+DOMAIN-SUFFIX,wikos.top
+IP-CIDR,212.192.12.245/32,no-resolve
+IP-CIDR,37.128.253.4/32,no-resolve
+
 # 国外DNS
 DOMAIN-SUFFIX,dns.google
 DOMAIN-SUFFIX,1dot1dot1dot1.cloudflare-dns.com
