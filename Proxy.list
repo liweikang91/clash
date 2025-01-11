@@ -5,6 +5,14 @@ DOMAIN-KEYWORD,1e100
 IP-CIDR,142.171.133.131/32,no-resolve
 IP-CIDR,103.115.43.2/32,no-resolve
 
+# Speedtest
+DOMAIN-SUFFIX,fast.com
+DOMAIN-SUFFIX,ooklaserver.net
+DOMAIN-SUFFIX,speed.cloudflare.com
+DOMAIN-SUFFIX,speed.dler.io
+DOMAIN-KEYWORD,speedtest
+DOMAIN-SUFFIX,speedtest.net
+
 # 国外DNS
 DOMAIN-SUFFIX,dns.google
 DOMAIN-SUFFIX,1dot1dot1dot1.cloudflare-dns.com
