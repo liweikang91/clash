@@ -6,6 +6,11 @@ DOMAIN-SUFFIX,stream-link.org
 DOMAIN-SUFFIX,hoy.tv
 DOMAIN-SUFFIX,hkdvb.com
 
+#NOWTV
+DOMAIN-SUFFIX,pccw-live-cdn-01.akamaized.net
+DOMAIN-KEYWORD,pccw-live
+DOMAIN-SUFFIX,nowe.com
+
 # TW
 DOMAIN-SUFFIX,cdn.hinet.net
 
@@ -21,22 +26,6 @@ DOMAIN-SUFFIX,wx.sb
 # 4GTV
 DOMAIN-SUFFIX,4gtv.tv
 DOMAIN-KEYWORD,4gtv
-
-# NAME: Speedtest
-# AUTHOR: blackmatrix7
-# REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-07-03 16:16:08
-# DOMAIN-KEYWORD: 1
-# DOMAIN-SUFFIX: 4
-# TOTAL: 5
-DOMAIN-SUFFIX,fast.com
-DOMAIN-SUFFIX,ooklaserver.net
-DOMAIN-SUFFIX,speed.cloudflare.com
-DOMAIN-SUFFIX,speed.dler.io
-DOMAIN-KEYWORD,speedtest
-
-# speedtest
-DOMAIN-SUFFIX,speedtest.net
 
 # WIKO
 DOMAIN-SUFFIX,wiko.top
