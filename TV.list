@@ -14,21 +14,13 @@ DOMAIN-SUFFIX,stream-link.org
 DOMAIN-SUFFIX,hoy.tv
 DOMAIN-SUFFIX,hkdvb.com
 
-# TW
-DOMAIN-SUFFIX,cdn.hinet.net
-
 # Pixman
-DOMAIN-SUFFIX,hinet.net
 DOMAIN-SUFFIX,ofiii.com
 DOMAIN-SUFFIX,cooltv.top
 DOMAIN-SUFFIX,thetvapp.to
 DOMAIN-SUFFIX,livednow.com
 DOMAIN-SUFFIX,livednow.org
 DOMAIN-SUFFIX,wx.sb
-
-# 4GTV
-DOMAIN-SUFFIX,4gtv.tv
-DOMAIN-KEYWORD,4gtv
 
 # WIKO
 DOMAIN-SUFFIX,wiko.top
