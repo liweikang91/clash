@@ -3,6 +3,7 @@ DOMAIN-SUFFIX,pccw-live-cdn-01.akamaized.net
 DOMAIN-KEYWORD,pccw-live
 DOMAIN-SUFFIX,nowe.com
 DOMAIN-SUFFIX,nowestatic.com
+DOMAIN-SUFFIX,hk-hkg.doh.sb
 
 # ViuTV
 USER-AGENT,Viu*
