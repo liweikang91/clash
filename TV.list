@@ -27,3 +27,13 @@ DOMAIN-SUFFIX,wiko.top
 DOMAIN-SUFFIX,wikos.top
 IP-CIDR,212.192.12.245/32,no-resolve
 IP-CIDR,37.128.253.4/32,no-resolve
+
+# MyTVSuper
+USER-AGENT,mytv*
+DOMAIN-KEYWORD,nowtv100
+DOMAIN-KEYWORD,mytvsuper
+DOMAIN-KEYWORD,rthklive
+DOMAIN,mytvsuperlimited.hb.omtrdc.net
+DOMAIN,mytvsuperlimited.sc.omtrdc.net
+DOMAIN-SUFFIX,mytvsuper.com
+DOMAIN-SUFFIX,tvb.com
