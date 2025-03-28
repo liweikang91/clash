@@ -1,0 +1,39 @@
+# Speedtest
+DOMAIN-SUFFIX,fast.com
+DOMAIN-SUFFIX,ooklaserver.net
+DOMAIN-SUFFIX,speed.cloudflare.com
+DOMAIN-SUFFIX,speed.dler.io
+DOMAIN-KEYWORD,speedtest
+DOMAIN-SUFFIX,speedtest.net
+
+# stream-link
+DOMAIN-KEYWORD,stream-link
+DOMAIN-SUFFIX,stream-link.org
+
+# TV
+DOMAIN-SUFFIX,hoy.tv
+DOMAIN-SUFFIX,hkdvb.com
+
+# Pixman
+DOMAIN-SUFFIX,ofiii.com
+DOMAIN-SUFFIX,cooltv.top
+DOMAIN-SUFFIX,thetvapp.to
+DOMAIN-SUFFIX,livednow.com
+DOMAIN-SUFFIX,livednow.org
+DOMAIN-SUFFIX,wx.sb
+
+# WIKO
+DOMAIN-SUFFIX,wiko.top
+DOMAIN-SUFFIX,wikos.top
+IP-CIDR,212.192.12.245/32,no-resolve
+IP-CIDR,37.128.253.4/32,no-resolve
+
+# MyTVSuper
+USER-AGENT,mytv*
+DOMAIN-KEYWORD,nowtv100
+DOMAIN-KEYWORD,mytvsuper
+DOMAIN-KEYWORD,rthklive
+DOMAIN,mytvsuperlimited.hb.omtrdc.net
+DOMAIN,mytvsuperlimited.sc.omtrdc.net
+DOMAIN-SUFFIX,mytvsuper.com
+DOMAIN-SUFFIX,tvb.com
