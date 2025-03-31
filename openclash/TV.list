@@ -1,12 +1,7 @@
-
-
+# 电视服务 --------------------------------------------------------------------
 # stream-link
 DOMAIN-KEYWORD,stream-link
 DOMAIN-SUFFIX,stream-link.org
-
-# TV
-DOMAIN-SUFFIX,hoy.tv
-DOMAIN-SUFFIX,hkdvb.com
 
 # Pixman
 DOMAIN-SUFFIX,ofiii.com
@@ -14,7 +9,11 @@ DOMAIN-SUFFIX,cooltv.top
 DOMAIN-SUFFIX,thetvapp.to
 DOMAIN-SUFFIX,livednow.com
 DOMAIN-SUFFIX,livednow.org
-DOMAIN-SUFFIX,wx.sb
+
+# 香港流媒体 --------------------------------------------------------------------
+# TV
+DOMAIN-SUFFIX,hoy.tv
+DOMAIN-SUFFIX,hkdvb.com
 
 # MyTVSuper
 USER-AGENT,mytv*
@@ -26,7 +25,6 @@ DOMAIN,mytvsuperlimited.sc.omtrdc.net
 DOMAIN-SUFFIX,mytvsuper.com
 DOMAIN-SUFFIX,tvb.com
 
-# NOW --------------------------------------------------------------------
 # NOWTV
 DOMAIN-SUFFIX,pccw-live-cdn-01.akamaized.net
 DOMAIN-KEYWORD,pccw-live
@@ -53,7 +51,7 @@ DOMAIN-SUFFIX,viu.com
 DOMAIN-SUFFIX,viu.now.com
 DOMAIN-SUFFIX,viu.tv
 
-# 台湾服务 --------------------------------------------------------------------
+# 台湾流媒体 --------------------------------------------------------------------
 # TW
 DOMAIN-SUFFIX,4gtv.tv
 DOMAIN-KEYWORD,4gtv
