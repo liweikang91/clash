@@ -1,10 +1,4 @@
-# Speedtest
-DOMAIN-SUFFIX,fast.com
-DOMAIN-SUFFIX,ooklaserver.net
-DOMAIN-SUFFIX,speed.cloudflare.com
-DOMAIN-SUFFIX,speed.dler.io
-DOMAIN-KEYWORD,speedtest
-DOMAIN-SUFFIX,speedtest.net
+
 
 # stream-link
 DOMAIN-KEYWORD,stream-link
@@ -22,12 +16,6 @@ DOMAIN-SUFFIX,livednow.com
 DOMAIN-SUFFIX,livednow.org
 DOMAIN-SUFFIX,wx.sb
 
-# WIKO
-DOMAIN-SUFFIX,wiko.top
-DOMAIN-SUFFIX,wikos.top
-IP-CIDR,212.192.12.245/32,no-resolve
-IP-CIDR,37.128.253.4/32,no-resolve
-
 # MyTVSuper
 USER-AGENT,mytv*
 DOMAIN-KEYWORD,nowtv100
@@ -38,7 +26,8 @@ DOMAIN,mytvsuperlimited.sc.omtrdc.net
 DOMAIN-SUFFIX,mytvsuper.com
 DOMAIN-SUFFIX,tvb.com
 
-#NOWTV
+# NOW --------------------------------------------------------------------
+# NOWTV
 DOMAIN-SUFFIX,pccw-live-cdn-01.akamaized.net
 DOMAIN-KEYWORD,pccw-live
 DOMAIN-SUFFIX,nowe.com
@@ -63,3 +52,17 @@ DOMAIN-SUFFIX,mobileanalytics.us-east-1.amazonaws.com
 DOMAIN-SUFFIX,viu.com
 DOMAIN-SUFFIX,viu.now.com
 DOMAIN-SUFFIX,viu.tv
+
+# 台湾服务 --------------------------------------------------------------------
+# TW
+DOMAIN-SUFFIX,4gtv.tv
+DOMAIN-KEYWORD,4gtv
+DOMAIN,ntdofifreepc.akamaized.net
+DOMAIN,ntdofifreepocpc.akamaized.net
+DOMAIN,ofissaifreepc.akamaized.net
+DOMAIN-SUFFIX,litv.tv
+DOMAIN-SUFFIX,ofiii.com
+DOMAIN-SUFFIX,cdn.hinet.net
+DOMAIN-SUFFIX,ott.hinet.net
+DOMAIN-SUFFIX,insurancegogogo.com
+DOMAIN-KEYWORD,hamivideo
