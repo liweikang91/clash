@@ -1,43 +1,14 @@
-# 香港流媒体 --------------------------------------------------------------------
-# TV
-DOMAIN-SUFFIX,hoy.tv
-DOMAIN-SUFFIX,hkdvb.com
+# 电视服务 --------------------------------------------------------------------
+# stream-link
+DOMAIN-KEYWORD,stream-link
+DOMAIN-SUFFIX,stream-link.org
 
-# MyTVSuper
-USER-AGENT,mytv*
-DOMAIN-KEYWORD,nowtv100
-DOMAIN-KEYWORD,mytvsuper
-DOMAIN-KEYWORD,rthklive
-DOMAIN,mytvsuperlimited.hb.omtrdc.net
-DOMAIN,mytvsuperlimited.sc.omtrdc.net
-DOMAIN-SUFFIX,mytvsuper.com
-DOMAIN-SUFFIX,tvb.com
-
-# NOWTV
-DOMAIN-SUFFIX,pccw-live-cdn-01.akamaized.net
-DOMAIN-KEYWORD,pccw-live
-DOMAIN-SUFFIX,nowe.com
-DOMAIN-SUFFIX,nowestatic.com
-DOMAIN-SUFFIX,now-tv.com
-DOMAIN-SUFFIX,now.com
-
-# ViuTV
-USER-AGENT,Viu*
-PROCESS-NAME,com.viu.pad
-PROCESS-NAME,com.viu.phone
-PROCESS-NAME,com.vuclip.viu
-DOMAIN,api.viu.now.com
-DOMAIN,d1k2us671qcoau.cloudfront.net
-DOMAIN,d2anahhhmp1ffz.cloudfront.net
-DOMAIN,dfp6rglgjqszk.cloudfront.net
-DOMAIN-SUFFIX,cognito-identity.us-east-1.amazonaws.com
-DOMAIN-SUFFIX,d1k2us671qcoau.cloudfront.net
-DOMAIN-SUFFIX,d2anahhhmp1ffz.cloudfront.net
-DOMAIN-SUFFIX,dfp6rglgjqszk.cloudfront.net
-DOMAIN-SUFFIX,mobileanalytics.us-east-1.amazonaws.com
-DOMAIN-SUFFIX,viu.com
-DOMAIN-SUFFIX,viu.now.com
-DOMAIN-SUFFIX,viu.tv
+# Pixman
+DOMAIN-SUFFIX,ofiii.com
+DOMAIN-SUFFIX,cooltv.top
+DOMAIN-SUFFIX,thetvapp.to
+DOMAIN-SUFFIX,livednow.com
+DOMAIN-SUFFIX,livednow.org
 
 # 台湾流媒体 --------------------------------------------------------------------
 # TW
