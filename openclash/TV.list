@@ -25,6 +25,8 @@ DOMAIN-SUFFIX,mytvsuper.com
 DOMAIN-SUFFIX,tvb.com
 
 # NOWTV
+DOMAIN-KEYWORD,nowtv
+DOMAIN-KEYWORD,nowe
 DOMAIN-SUFFIX,pccw-live-cdn-01.akamaized.net
 DOMAIN-KEYWORD,pccw-live
 DOMAIN-SUFFIX,nowe.com
