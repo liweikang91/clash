@@ -24,9 +24,6 @@ DOMAIN-SUFFIX,wikos.top
 IP-CIDR,212.192.12.245/32,no-resolve
 IP-CIDR,37.128.253.4/32,no-resolve
 
-# 4GTV-CDN
-# DOMAIN-KEYWORD,4gtvfree
-
 # Speedtest
 DOMAIN-SUFFIX,fast.com
 DOMAIN-SUFFIX,ooklaserver.net
