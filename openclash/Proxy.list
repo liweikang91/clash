@@ -18,8 +18,6 @@ IP-CIDR,185.222.222.222/32,no-resolve
 IP-CIDR,208.67.222.222/32,no-resolve
 IP-CIDR,208.67.220.220/32,no-resolve
 
-# 4GTV
-DOMAIN,4gtvfree-cds.cdn.hinet.net
 # WIKO
 DOMAIN-SUFFIX,wiko.top
 DOMAIN-SUFFIX,wikos.top
