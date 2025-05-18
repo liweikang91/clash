@@ -15,7 +15,6 @@ DOMAIN-SUFFIX,hoy.tv
 DOMAIN-SUFFIX,hkdvb.com
 
 # MyTVSuper
-USER-AGENT,mytv*
 DOMAIN-KEYWORD,nowtv100
 DOMAIN-KEYWORD,mytvsuper
 DOMAIN-KEYWORD,rthklive
@@ -35,7 +34,6 @@ DOMAIN-SUFFIX,now-tv.com
 DOMAIN-SUFFIX,now.com
 
 # ViuTV
-USER-AGENT,Viu*
 PROCESS-NAME,com.viu.pad
 PROCESS-NAME,com.viu.phone
 PROCESS-NAME,com.vuclip.viu
