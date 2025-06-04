@@ -28,5 +28,7 @@ DOMAIN-SUFFIX,ip.sb
 DOMAIN-SUFFIX,ip-api.com
 
 # AGE
-DOMAIN-KEYWORD,agedm
-DOMAIN-KEYWORD,agefans
+DOMAIN-SUFFIX,agedm.org
+DOMAIN-SUFFIX,age.tv
+DOMAIN-SUFFIX,agefans.com
+DOMAIN-SUFFIX,agefans.la
