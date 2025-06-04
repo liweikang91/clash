@@ -27,6 +27,12 @@ DOMAIN-SUFFIX,ipapi.co
 DOMAIN-SUFFIX,ip.sb
 DOMAIN-SUFFIX,ip-api.com
 
+# 国内ping
+DOMAIN,blog.cloudflare.com
+DOMAIN,api.github.com
+DOMAIN,developers.cloudflare.com
+DOMAIN,hostinger.com
+
 # AGE
 DOMAIN-SUFFIX,agedm.org
 DOMAIN-SUFFIX,age.tv
