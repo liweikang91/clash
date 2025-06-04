@@ -32,6 +32,7 @@ DOMAIN,blog.cloudflare.com
 DOMAIN,api.github.com
 DOMAIN,developers.cloudflare.com
 DOMAIN,hostinger.com
+DOMAIN,ahrefs.com
 
 # AGE
 DOMAIN-SUFFIX,agedm.org
