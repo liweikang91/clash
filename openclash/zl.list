@@ -26,3 +26,7 @@ DOMAIN,ip-api.com
 DOMAIN-SUFFIX,ipapi.co
 DOMAIN-SUFFIX,ip.sb
 DOMAIN-SUFFIX,ip-api.com
+
+# AGE
+DOMAIN-KEYWORD,agedm
+DOMAIN-KEYWORD,agefans
