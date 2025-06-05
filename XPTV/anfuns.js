@@ -1,43 +1,21 @@
 const cheerio = createCheerio()
+const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+const headers = {
+  'Referer': 'https://m.agefans.la/',
+  'Origin': 'https://m.agefans.la',
+  'User-Agent': UA,
+}
 
-const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
-
-let appConfig = {
-    ver: 1,
-    title: 'anfuns',
-    site: 'https://www.anfuns.cc',
-    tabs: [
-        {
-            name: '最近更新',
-            ext: {
-                id: 0,
-            },
-        },
-        {
-            name: '新旧番剧',
-            ext: {
-                id: 1,
-            },
-        },
-        {
-            name: '蓝光无修',
-            ext: {
-                id: 2,
-            },
-        },
-        {
-            name: '动漫剧场',
-            ext: {
-                id: 3,
-            },
-        },
-        {
-            name: '欧美动漫',
-            ext: {
-                id: 4,
-            },
-        },
-    ],
+const appConfig = {
+  ver: 1,
+  title: "AGE",
+  site: "https://m.agefans.la/#/",
+  tabs: [{
+    name: '最近更新',
+    ext: {
+      id: 0,
+    },
+  }]
 }
 
 async function getConfig() {
@@ -45,151 +23,118 @@ async function getConfig() {
 }
 
 async function getCards(ext) {
-    ext = argsify(ext)
-    let cards = []
-    let { id, page = 1 } = ext
+  ext = argsify(ext)
+  let cards = []
+  let id = ext.id
+  let page = ext.page || 1
 
-    let url = `${appConfig.site}/type/${id}-${page}.html`
-    if (id === 0) url = `${appConfig.site}/map.html`
+  const url = `https://api.agefans.la/v2/catalog?genre=all&label=all&letter=all&order=time&region=all&resource=all&season=all&status=all&year=all&size=20&page=${page}`
 
-    const { data } = await $fetch.get(url, {
-        headers: {
-            'User-Agent': UA,
-        },
-    })
+  const { data } = await $fetch.get(url, {
+    headers
+  })
+  
+  argsify(data).videos?.forEach( each => {
+    cards.push({
+      vod_id: `${each.id}`,
+      vod_name: each.name,
+      vod_pic: each.cover,
+      vod_remarks: each.uptodate,
+      ext: {
+        url: `https://api.agefans.la/v2/detail/${each.id}`,
+      },
+    });
+  })
 
-    const $ = cheerio.load(data)
-
-    $('.hl-list-item').each((_, element) => {
-        const vodUrl = $(element).find('.hl-item-thumb').attr('href') || $(element).find('.hl-item-wrap').attr('href')
-        const vodPic = $(element).find('.hl-item-thumb').attr('data-original')
-        const vodName = $(element).find('.hl-item-title').text()
-        const vodDiJiJi = $(element).find('.remarks').text() || $(element).find('.hl-item-content .hl-text-subs').text().replace('/', '')
-        cards.push({
-            vod_id: vodUrl,
-            vod_name: vodName,
-            vod_pic: vodPic,
-            vod_remarks: vodDiJiJi.trim(),
-            ext: {
-                url: `${appConfig.site}${vodUrl}`,
-            },
-        })
-    })
-
-    return jsonify({
-        list: cards,
-    })
+  return jsonify({
+      list: cards,
+  });
 }
 
 async function getTracks(ext) {
-    ext = argsify(ext)
-    let list = []
-    let url = ext.url
+  ext = argsify(ext)
+  let groups = []
+  let url = ext.url
 
-    const { data } = await $fetch.get(url, {
-        headers: {
-            'User-Agent': UA,
-        },
-    })
+  // 发送请求
+  const { data } = await $fetch.get(url, {
+      headers
+  });
+  
+  const json = argsify(data)
+  const player_label_arr = json.player_label_arr
+  const playlists = json.video.playlists
+  const vip = json.player_jx.vip
+  const zj = json.player_jx.zj
+  const player_vip = json.player_vip
 
-    const $ = cheerio.load(data)
-
-    let from = []
-    $('.hl-plays-from a').each((i, e) => {
-        let name = $(e).text().trim()
-        from.push(name)
-    })
-
-    $('ul.hl-plays-list').each((i, e) => {
-        const play_from = from[i]
-        let videos = $(e).find('li a')
-        let tracks = []
-        videos.each((i, e) => {
-            const name = $(e).text()
-            const href = $(e).attr('href')
-            tracks.push({
-                name: name,
-                pan: '',
-                ext: {
-                    url: `${appConfig.site}${href}`,
-                },
-            })
+  for (var key in playlists) {
+    if (!key.includes('m3u8')){
+      continue
+    }
+    let v = playlists[key]
+    let group = {
+      title: player_label_arr[key],
+      tracks: [],
+    }
+    v.forEach( each => {
+      if (each.length == 2) {
+        let path = `${zj}${each[1]}`
+        if (player_vip.hasOwnProperty(key)) {
+          path = `${vip}${each[1]}`
+        }
+        group.tracks.push({
+          name: each[0],
+          pan: '',
+          ext: {
+            url: path
+          }
         })
-        list.push({
-            title: play_from,
-            tracks,
-        })
+      }
     })
-
-    return jsonify({
-        list: list,
-    })
+    if (group.tracks.length > 0) {
+      groups.push(group)
+    }
+  }
+  
+  return jsonify({ list: groups })
 }
 
 async function getPlayinfo(ext) {
     ext = argsify(ext)
-    const url = ext.url
-
+    let url = ext.url
     const { data } = await $fetch.get(url, {
-        headers: {
-            'User-Agent': UA,
-        },
+        headers
     })
-
-    const $ = cheerio.load(data)
-    const config = JSON.parse($('script:contains(player_)').html().replace('var player_aaaa=', ''))
-    const artPlayer = appConfig.site + '/vapi/AIRA/art.php?url=' + config.url
-    const { data: artRes } = await $fetch.get(artPlayer, {
-        headers: {
-            'User-Agent': UA,
-            Referer: url,
-        },
-    })
-
-    if (artRes) {
-        const $2 = cheerio.load(artRes)
-        const playUrl = $2('script:contains(var Config)')
-            .html()
-            .match(/url: '(.*)'/)[1]
-        return jsonify({ urls: [playUrl] })
-    }
-
-    return jsonify({ urls: [] })
+    const m3u = data.match(/Vurl = '(.+?)'/)[1]
+    return jsonify({ 'urls': [m3u] })
 }
 
 async function search(ext) {
-    ext = argsify(ext)
-    let cards = []
+  ext = argsify(ext)
+  let cards = [];
 
-    let text = encodeURIComponent(ext.text)
-    let page = ext.page || 1
-    let url = `${appConfig.site}/search/page/${page}/wd/${text}.html`
+  let text = encodeURIComponent(ext.text)
+  let page = ext.page || 1
 
-    const { data } = await $fetch.get(url, {
-        headers: {
-            'User-Agent': UA,
-        },
-    })
+  const url = `https://api.agefans.la/v2/search?query=${text}&page=${page}`
+  const { data } = await $fetch.get(url, {
+    headers
+  })
+  
+  argsify(data).data?.videos?.forEach( each => {
+    cards.push({
+      vod_id: `${each.id}`,
+      vod_name: each.name,
+      vod_pic: each.cover,
+      vod_remarks: each.uptodate,
+      ext: {
+        url: `https://api.agefans.la/v2/detail/${each.id}`,
+      },
+    });
+  })
 
-    const $ = cheerio.load(data)
-
-    $('li.hl-list-item').each((_, element) => {
-        const vodUrl = $(element).find('a.hl-item-thumb').attr('href')
-        const vodPic = $(element).find('a.hl-item-thumb').attr('data-original')
-        const vodName = $(element).find('a.hl-item-thumb').attr('title')
-        const vodDiJiJi = $(element).find('span.remarks').text()
-        cards.push({
-            vod_id: vodUrl,
-            vod_name: vodName,
-            vod_pic: vodPic,
-            vod_remarks: vodDiJiJi.trim(),
-            ext: {
-                url: `${appConfig.site}${vodUrl}`,
-            },
-        })
-    })
-
-    return jsonify({
-        list: cards,
-    })
+  return jsonify({
+      list: cards,
+  });
 }
