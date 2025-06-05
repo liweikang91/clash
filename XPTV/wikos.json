@@ -3,7 +3,7 @@
     {
       "name": "AGEFANS",
       "type": 3,
-      "api": "csp_age",
+      "api": "csp_agewiko",
       "ext": "https://github.com/liweikang91/clash/raw/refs/heads/main/XPTV/agefans.js"
     }
   ]
