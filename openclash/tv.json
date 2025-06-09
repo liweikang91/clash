@@ -1,0 +1,42 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "mytvsuperlimited.hb.omtrdc.net",
+        "mytvsuperlimited.sc.omtrdc.net",
+        "api.viu.now.com",
+        "d1k2us671qcoau.cloudfront.net",
+        "d2anahhhmp1ffz.cloudfront.net",
+        "dfp6rglgjqszk.cloudfront.net"
+      ],
+      "domain_suffix": [
+        "stream-link.org",
+        "cooltv.top",
+        "thetvapp.to",
+        "livednow.com",
+        "livednow.org",
+        "hoy.tv",
+        "hkdvb.com",
+        "mytvsuper.com",
+        "tvb.com",
+        "nowe.com",
+        "nowestatic.com",
+        "now-tv.com",
+        "now.com",
+        "mobileanalytics.us-east-1.amazonaws.com",
+        "viu.com",
+        "viu.now.com",
+        "viu.tv"
+      ],
+       "domain_keyword": [
+        "stream-link",
+        "nowtv100",
+        "mytvsuper",
+        "rthklive",
+        "nowtv",
+        "nowe"
+      ]
+    }
+  ],
+  "version": 2
+}
