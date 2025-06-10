@@ -22,13 +22,3 @@ IP-CIDR,208.67.220.220/32,no-resolve
 DOMAIN-SUFFIX,qichiyu.com
 DOMAIN-SUFFIX,wiko.top
 DOMAIN-SUFFIX,wikos.top
-IP-CIDR,212.192.12.245/32,no-resolve
-IP-CIDR,37.128.253.4/32,no-resolve
-
-# Speedtest
-DOMAIN-SUFFIX,fast.com
-DOMAIN-SUFFIX,ooklaserver.net
-DOMAIN-SUFFIX,speed.cloudflare.com
-DOMAIN-SUFFIX,speed.dler.io
-DOMAIN-KEYWORD,speedtest
-DOMAIN-SUFFIX,speedtest.net
