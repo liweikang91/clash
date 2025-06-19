@@ -19,12 +19,7 @@ DOMAIN-SUFFIX,szhdy.pro
 # lala
 DOMAIN-SUFFIX,lala.gg
 
-# IP
-#DOMAIN-SUFFIX,ipapi.co
-#DOMAIN-SUFFIX,ip.sb
-#DOMAIN-SUFFIX,ip-api.com
-
-# 国内ping
+# 哪吒面板地区
 DOMAIN,blog.cloudflare.com
 DOMAIN,api.github.com
 DOMAIN,developers.cloudflare.com
@@ -33,6 +28,7 @@ DOMAIN,ahrefs.com
 
 # AGE
 DOMAIN-SUFFIX,agedm.org
+DOMAIN-SUFFIX,agedm.me
 DOMAIN-SUFFIX,age.tv
 DOMAIN-SUFFIX,agefans.com
 DOMAIN-SUFFIX,agefans.la
