@@ -22,3 +22,6 @@ IP-CIDR,208.67.220.220/32,no-resolve
 DOMAIN-SUFFIX,qichiyu.com
 DOMAIN-SUFFIX,wiko.top
 DOMAIN-SUFFIX,wikos.top
+
+# XPTV主站
+DOMAIN-SUFFIX,infuseku.xyz
