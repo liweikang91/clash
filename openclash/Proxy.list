@@ -25,3 +25,6 @@ DOMAIN-SUFFIX,wikos.top
 
 # XPTV主站
 DOMAIN-SUFFIX,infuseku.xyz
+
+# XPTV大封面
+DOMAIN-SUFFIX,image.tmdb.org
