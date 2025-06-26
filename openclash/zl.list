@@ -1,17 +1,17 @@
 # wogg
 DOMAIN-SUFFIX,wogg.net
 DOMAIN-SUFFIX,wogg.one
-#DOMAIN-KEYWORD,wogg
+DOMAIN-KEYWORD,wogg
 DOMAIN-SUFFIX,xxooo.cf
-#DOMAIN-KEYWORD,4k-av
+DOMAIN-KEYWORD,4k-av
 DOMAIN-SUFFIX,4k-av.com
-#DOMAIN-KEYWORD,subaibai
+DOMAIN-KEYWORD,subaibai
 DOMAIN-SUFFIX,subaibai.com
-#DOMAIN-KEYWORD,anfuns
+DOMAIN-KEYWORD,anfuns
 DOMAIN-SUFFIX,anfuns.cc
 DOMAIN-SUFFIX,anfuns.vip
 DOMAIN-SUFFIX,mucpan.cc
-#DOMAIN-KEYWORD,mucpan
+DOMAIN-KEYWORD,mucpan
 
 # hdy
 DOMAIN-SUFFIX,szhdy.com
@@ -34,12 +34,12 @@ DOMAIN-SUFFIX,age.tv
 DOMAIN-SUFFIX,agefans.com
 DOMAIN-SUFFIX,agefans.la
 DOMAIN-SUFFIX,agedm.live
-#DOMAIN-KEYWORD,agedm
-#DOMAIN-KEYWORD,agefans
+DOMAIN-KEYWORD,agedm
+DOMAIN-KEYWORD,agefans
 
 # XPTV
 DOMAIN-SUFFIX,czzymovie.com
-#DOMAIN-KEYWORD,czzymovie
+DOMAIN-KEYWORD,czzymovie
 
 # WIKO
 DOMAIN-SUFFIX,wikos.cn
