@@ -3,9 +3,7 @@
     {
       "domain_keyword": [
         "youtube"
-      ]
-    },
-    {
+      ],
       "domain_suffix": [
         "youtube",
         "youtube.ru",
@@ -185,6 +183,6 @@
         "ggpht.cn"
       ]
     }
-  ]
+  ],
   "version": 1
 }
