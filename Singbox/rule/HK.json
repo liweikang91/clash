@@ -11,18 +11,14 @@
 	"dfp6rglgjqszk.cloudfront.net",
 	"mytvsuperlimited.sc.omtrdc.net",
 	"mytvsuperlimited.hb.omtrdc.net"
-      ]
-    },
-    {
+      ],
       "domain_keyword": [
         "pccw-live",
         "hami",
 	"rthklive",
 	"mytvsuper",
 	"nowtv100"
-      ]
-    },
-    {
+      ],
       "domain_suffix": [
         "cognito-identity.us-east-1.amazonaws.com",
 	"d1k2us671qcoau.cloudfront.net",
