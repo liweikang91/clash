@@ -1,7 +1,26 @@
 {
   "rules": [
     {
-      "domain": [
+      "domain_suffix": [
+	"tvb.com",
+	"mytvsuper.com",
+        "cognito-identity.us-east-1.amazonaws.com",
+	"d1k2us671qcoau.cloudfront.net",
+	"d2anahhhmp1ffz.cloudfront.net",
+	"dfp6rglgjqszk.cloudfront.net",
+        "mobileanalytics.us-east-1.amazonaws.com",
+	"viu.com",
+	"viu.now.com",
+	"viu.tv",
+	"pccw-live-cdn-01.akamaized.net",
+	"nowe.com",
+	"nowestatic.com",
+	"now-tv.com",
+	"now.com",
+	"hkdvb.com",
+	"hoy.tv"
+      ],
+	      "domain": [
         "com.viu.pad",
         "com.viu.phone",
         "com.vuclip.viu",
@@ -18,25 +37,6 @@
 	"rthklive",
 	"mytvsuper",
 	"nowtv100"
-      ],
-      "domain_suffix": [
-        "cognito-identity.us-east-1.amazonaws.com",
-	"d1k2us671qcoau.cloudfront.net",
-	"d2anahhhmp1ffz.cloudfront.net",
-	"dfp6rglgjqszk.cloudfront.net",
-        "mobileanalytics.us-east-1.amazonaws.com",
-	"viu.com",
-	"viu.now.com",
-	"viu.tv",
-	"pccw-live-cdn-01.akamaized.net",
-	"nowe.com",
-	"nowestatic.com",
-	"now-tv.com",
-	"now.com",
-	"tvb.com",
-	"mytvsuper.com",
-	"hkdvb.com",
-	"hoy.tv"
       ]
     }
   ],
