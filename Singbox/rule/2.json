@@ -1,5 +1,4 @@
-{
-  "rule": [
+"rules": [
     {
       "domain_keyword": [
         "youtube"
@@ -183,6 +182,4 @@
         "ggpht.cn"
       ]
     }
-  ],
-  "version": 2
-}
+  ]
