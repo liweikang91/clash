@@ -1,12 +1,12 @@
 # NOWTV
 DOMAIN-KEYWORD,nowtv
 DOMAIN-KEYWORD,nowe
-DOMAIN-SUFFIX,pccw-live-cdn-01.akamaized.net
+DOMAIN-SUFFIX,now.com
 DOMAIN-KEYWORD,pccw-live
 DOMAIN-SUFFIX,nowe.com
 DOMAIN-SUFFIX,nowestatic.com
 DOMAIN-SUFFIX,now-tv.com
-DOMAIN-SUFFIX,now.com
+DOMAIN-SUFFIX,pccw-live-cdn-01.akamaized.net
 
 # ViuTV
 DOMAIN,api.viu.now.com
